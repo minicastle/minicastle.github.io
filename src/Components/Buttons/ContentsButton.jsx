@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import {HiOutlineArrowNarrowRight} from 'react-icons/hi'
 
 const Size1Container = styled.div`
     cursor: pointer;
@@ -23,6 +22,11 @@ const Size1Container = styled.div`
     margin: 20px 0;
     :hover{
         animation: fadein 0.2s linear both;
+        #arrow{
+            &::after{
+                content: '→';
+            }
+        }
     }
     @keyframes fadein {
         from{
@@ -38,6 +42,7 @@ const Size1Title = styled.div`
     font-size: 30px;
     font-family: 'budae';
     z-index: 1;
+    transition: 0.5s ease-in-out;
     ${(props)=>{return props.description?{border:'5px solid transparent',padding:'5px 10px'}:{border:'5px solid white',padding:'5px'}}}
 `;
 const Size1Arrow = styled.div`
@@ -71,7 +76,7 @@ function ContentsButtonSize1({children,imgsrc,borderColor}) {
         >
             <Size1ImageBlur/>
             <Size1Title description={description}>{children}</Size1Title>
-            <Size1Arrow>ㅡ</Size1Arrow>
+            <Size1Arrow id='arrow'></Size1Arrow>
         </Size1Container>
     )
 }

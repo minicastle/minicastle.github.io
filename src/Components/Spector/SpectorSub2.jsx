@@ -25,11 +25,11 @@ const CustomButton = styled.div`
     cursor: pointer;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     border-radius: 20px;
     letter-spacing: 5px;
     background-color: #14C38E;
-    padding: 10px 10px;
+    padding: 10px 10px 15px;
     font-size: 30px;
     opacity: 0;
     animation: Fadein 1s linear both;
@@ -54,8 +54,8 @@ function SpectorSub2() {
         <Container>
             <BlinkContainer time={2}><Type2>포트폴리오를 보시겠습니까?</Type2></BlinkContainer>
             <ButtonContainer>
-                <Link to={'/'} reloadDocument><CustomButton>Replay<RxReload/></CustomButton></Link>
-                <Link to={'/home'}><CustomButton>See that<BsArrowRight/></CustomButton></Link>
+                <Link to={'/'} reloadDocument><CustomButton>Replay <RxReload/></CustomButton></Link>
+                <Link to={'/home'}><CustomButton>See that <BsArrowRight/></CustomButton></Link>
             </ButtonContainer>
         </Container>
         </>

@@ -7,8 +7,7 @@ const Container = styled.div`
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 100vh;
-    background-image: url(./images/back.png);
+    height: 80vh;
 `;
 const Observe = styled.img`
     position: absolute;
@@ -20,6 +19,7 @@ const Head = styled.div`
     justify-content: flex-start;
     align-items: center;
     z-index: 10;
+    text-shadow: 5px 5px 5px black;
 `;
 const Head1 = styled.div`
     font-size: 90px;
@@ -60,9 +60,9 @@ function HeaderAnimate() {
             <Observe className="observe" data-value='8' src="./headerAnimate/image1.png"/>
             <Observe className="observe" data-value='10' src="./headerAnimate/image2.png"/>
             <Observe className="observe" data-value='-3' src="./headerAnimate/image3.png"/>
-            <Observe className="observe" data-value='6' src="./headerAnimate/image4.png"/>
+            <Observe className="observe" data-value='-6' src="./headerAnimate/image4.png"/>
             <Observe className="observe" data-value='-10' src="./headerAnimate/image5.png"/>
-            <Observe className="observe" data-value='9' src="./headerAnimate/image6.png"/>
+            <Observe className="observe" data-value='-9' src="./headerAnimate/image6.png"/>
             <Observe className="observe" data-value='11' src="./headerAnimate/image7.png"/>
             <Observe className="observe" data-value='8' src="./headerAnimate/image8.png"/>
         </Container>

@@ -54,7 +54,6 @@ const MenuListItem = styled.li`
 `;
 
 function Navbar({pageData='home'}) {
-    console.log(pageData);
     return (
         <Container>
             <Link to="/home">
