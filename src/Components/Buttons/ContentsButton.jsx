@@ -37,6 +37,7 @@ const Size1Container = styled.div`
         }
     }
 `;
+/** 자체제작 버튼 제목 */
 const Size1Title = styled.div`
     user-select: none;
     font-size: 30px;
@@ -45,12 +46,13 @@ const Size1Title = styled.div`
     transition: 0.5s ease-in-out;
     ${(props)=>{return props.description?{border:'5px solid transparent',padding:'5px 10px'}:{border:'5px solid white',padding:'5px'}}}
 `;
+/** 자체제작 버튼 Arrow 콘텐츠 표시 */
 const Size1Arrow = styled.div`
     font-size: 60px;
     font-weight: bold;
     z-index: 1;
 `;
-const Size1ImageBlur = styled.div`
+const Size1Image = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,7 +66,7 @@ const Size1ImageBlur = styled.div`
     height: 100%;
     border-radius: 20px;
 `;
-
+/** 이미지 포함 자체체작 버튼 1번 타입 */
 function ContentsButtonSize1({children,imgsrc,borderColor}) {
     const [description,setDiscription] = useState(true);
     return (
@@ -74,7 +76,7 @@ function ContentsButtonSize1({children,imgsrc,borderColor}) {
         onMouseOver={()=>{setDiscription(false)}} 
         onMouseOut={()=>{setDiscription(true)}}
         >
-            <Size1ImageBlur/>
+            <Size1Image/>
             <Size1Title description={description}>{children}</Size1Title>
             <Size1Arrow id='arrow'></Size1Arrow>
         </Size1Container>

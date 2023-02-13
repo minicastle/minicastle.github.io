@@ -9,10 +9,12 @@ const Container = styled.div`
     width: 100%;
     height: 80vh;
 `;
+/** 감시 대상 및 움직임 지정 */
 const Observe = styled.img`
     position: absolute;
     width: 100%;
 `;
+/** 제목 컨테이너 */
 const Head = styled.div`
     display: flex;
     flex-direction: column;
@@ -21,6 +23,7 @@ const Head = styled.div`
     z-index: 10;
     text-shadow: 5px 5px 5px black;
 `;
+/** 제목 */
 const Head1 = styled.div`
     font-size: 90px;
     font-weight: 900;
@@ -28,6 +31,7 @@ const Head1 = styled.div`
     line-height: 90px;
     letter-spacing: 20px;
 `;
+/** 서브 제목 */
 const Head2 = styled.div`
     font-size: 40px;
     font-weight: 800;

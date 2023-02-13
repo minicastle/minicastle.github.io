@@ -22,6 +22,7 @@ const Container = styled.div`
         }
     }
 `;
+/** 로딩시 화면 전환 이펙트 */
 const Spector = styled.div`
     position: absolute;
     top:0;
@@ -38,7 +39,7 @@ const Spector = styled.div`
         }
     }
 `;
-
+/** /로딩시 처음으로 보여질 화면 */
 function Spectors() {
     const [frame,setFrame] = useState('set1');
     const [load1,setLoad1] = useState(true);

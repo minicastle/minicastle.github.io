@@ -7,7 +7,7 @@ const Container = styled.div`
     align-items: center;
     color: white;
 `;
-
+/**Footer Bar */
 function Footer() {
     return (
         <Container>Footer</Container>

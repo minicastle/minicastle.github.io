@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
-import { Type2, Type3 } from './TextFormat';
+import { Type2, Type4 } from '../TextFormat';
 
 /** 총 콘텐츠 컨테이너 */
 const Container = styled.div`
     display: flex;
-    transition: 0.5s ease-in-out;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
+    width: 90%;
     background-color: #2b2b2b;
     padding: 40px 20px;
     position: relative;
@@ -31,7 +30,7 @@ const SkillName = styled.div`
     display: flex;
     justify-content: flex-start;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     width: 40%;
     white-space: nowrap;
 `;
@@ -68,16 +67,18 @@ const SkillGraphInner = styled.div`
         }
     }
 `;
-
+/** 나의 스킬 그래프 */
 function SkillsGraph() {
     useEffect(()=>{
+        /** 그래프 컨텐츠 로딩시 시행 */
         let io = new IntersectionObserver((e)=>{
             e.forEach((item)=>{
                 if(item.intersectionRatio>0){
                     item.target.classList.add('view');
                 }
             })
-        },{rootMargin:'-100px'});
+        },{rootMargin:'-150px'});
+        /** 할당 컨텐츠 */
         const list = document.querySelectorAll('#item');
         list.forEach((e)=>{
             io.observe(e);
@@ -86,7 +87,7 @@ function SkillsGraph() {
     return (
         <Container>
             <Type2>My Skills</Type2>
-            <div style={{width:'80%'}}><Type3>Front End</Type3></div>
+            <div style={{width:'80%'}}><Type4>Front End</Type4></div>
             <Skill>
                 <SkillName>Javascript</SkillName>
                 <SkillGraph><SkillGraphInner id='item' color='#F7DF1E' value={80}/></SkillGraph>
@@ -111,7 +112,7 @@ function SkillsGraph() {
                 <SkillName>electron</SkillName>
                 <SkillGraph><SkillGraphInner id='item' color='#47848F' value={50}/></SkillGraph>
             </Skill>
-            <div style={{width:'80%'}}><Type3>Back End</Type3></div>
+            <div style={{width:'80%'}}><Type4>Back End</Type4></div>
             <Skill>
                 <SkillName>Linux</SkillName>
                 <SkillGraph><SkillGraphInner id='item' color='#FCC624' value={70}/></SkillGraph>

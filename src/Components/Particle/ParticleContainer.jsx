@@ -7,8 +7,7 @@ const Container = styled.div`
     align-items: center;
     position: relative;
 `;
-
-
+/** 파티클 위치 설정용 */
 function ParticleContainer({mover}) {
     return (
         <Container mover={mover}>

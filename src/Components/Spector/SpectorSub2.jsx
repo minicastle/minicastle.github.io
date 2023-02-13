@@ -12,6 +12,7 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
 `;
+/** 자체제작 버튼 컨테이너 */
 const ButtonContainer = styled.div`
     display: flex;
     width: 100%;
@@ -20,6 +21,7 @@ const ButtonContainer = styled.div`
     gap: 100px;
     margin: 60px 0 0;
 `;
+/** 자체제작 버튼  */
 const CustomButton = styled.div`
     box-shadow: 2px 5px 6px 2px black;
     cursor: pointer;
@@ -47,7 +49,7 @@ const CustomButton = styled.div`
         scale: 1.03;
     }
 `;
-
+/** 사이트 이어보기 */
 function SpectorSub2() {
     return (
         <>

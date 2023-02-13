@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { ContentsButtonSize1 } from '../Components/Buttons/ContentsButton';
 import { Link } from 'react-router-dom';
 import HeaderAnimate from '../Components/HeaderAnimate';
-import AboutMySelf from '../Components/AboutMySelf';
+import AboutMySelf from '../Components/About/AboutMySelf';
 
 const Container = styled.div`
     display: flex;
@@ -16,7 +16,7 @@ const Container = styled.div`
     color: white;
     background-image: url(./images/backDefault.png);
 `;
-
+/** /home 로딩시 페이지 */
 function Homepage() {
     return (
         <Container>

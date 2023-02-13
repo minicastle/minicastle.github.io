@@ -7,32 +7,43 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 100%;
     gap: 50px;
     margin-top: 60px;
-    position: relative;
 `;
+/** 중앙 배치되는 콘텐츠 */
+const CenterItem = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 1000px;
+`;
+/** 오른쪽으로 배치되는 콘텐츠 */
 const RightSide = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
+    margin-left: 10%;
 `;
+/** 왼쪽으로 배치되는 콘텐츠 */
 const LeftSide = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
+    margin-right: 10%;
 `;
 
 function AboutMySelf() {
     return (
         <Container>
-            <RightSide>
+            <CenterItem>
                 <SkillsGraph/>
-            </RightSide>
+            </CenterItem>
             <LeftSide></LeftSide>
             <RightSide></RightSide>
             <LeftSide></LeftSide>

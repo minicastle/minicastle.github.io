@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { Type1, Type2 } from '../TextFormat';
+import { Type2 } from '../TextFormat';
 import BlinkContainer from '../Blink/BlinkContainer';
 
 const Container = styled.div`
@@ -8,8 +8,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
 `;
-
-
+/** 사이트 제작목적 */
 function SpectorSub1() {
     return (
         <Container>

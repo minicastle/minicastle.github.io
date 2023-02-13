@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
+/** 타이핑 애니메이션 및 컨테이너 */
 const Container = styled.div`
     width: 100%;
     position: relative;
@@ -27,7 +27,7 @@ const Container = styled.div`
         }
     }
 `;
-
+/** 타이핑 애니메이션 생성기 */
 function BlinkContainer({children,time}) {
     let childrenLength = (children.props.children).length;
     return (

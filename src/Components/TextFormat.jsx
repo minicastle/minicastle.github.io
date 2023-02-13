@@ -29,22 +29,25 @@ const Text4 = styled.div`
     position: relative;
     width: max-content;
 `;
-
+/** 텍스트 포멧 1  */
 function Type1({children}) {
     return (
         <Text1>{children}</Text1>
     )
 }
+/** 텍스트 포멧 2  */
 function Type2({children}) {
     return (
         <Text2>{children}</Text2>
     )
 }
+/** 텍스트 포멧 3  */
 function Type3({children}){
     return (
         <Text3>{children}</Text3>
     )
 }
+/** 텍스트 포멧 4  */
 function Type4({children}){
     return (
         <Text4>{children}</Text4>

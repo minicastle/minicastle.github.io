@@ -10,7 +10,7 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
 `;
-
+/** /로딩시 보이는 페이지 */
 function LoadPage() {
     return (
         <Container>

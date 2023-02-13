@@ -15,6 +15,7 @@ const Container = styled.div`
     top: 0;
     z-index: 100;
 `;
+/** Nav 제목 및 이미지 컨테이너(/home) */
 const NavHeader = styled.div`
     display: flex;
     justify-content: center;
@@ -24,14 +25,17 @@ const NavHeader = styled.div`
     user-select: none;
     cursor: pointer;
 `;
+/** Nav 이미지*/
 const NavIcon = styled.img`
     height: 60%;
     border-radius: 50%;
 `;
+/** Nav 제목*/
 const NavTitle = styled.span`
     font-size: 20px;
     font-family: 'LineSeed';
 `;
+/** Nav 메뉴 아이템 컨테이너 */
 const MenuList = styled.ul`
     display: flex;
     box-sizing: border-box;
@@ -43,6 +47,7 @@ const MenuList = styled.ul`
     font-family: 'LineSeed';
     font-size: 20px;
 `;
+/** Nav 메뉴 아이템 */
 const MenuListItem = styled.li`
     cursor: pointer;
     user-select: none;
@@ -52,7 +57,7 @@ const MenuListItem = styled.li`
         color: #919191;
     }
 `;
-
+/** NavBar */
 function Navbar({pageData='home'}) {
     return (
         <Container>
