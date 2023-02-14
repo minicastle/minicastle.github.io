@@ -32,9 +32,9 @@ const RightSide = styled.div`
     max-width: 1000px;
     margin-left: 5%;
     &.view{
-        animation: in 1s ease-in-out both;
+        animation: inright 1s ease-in-out both;
     }
-    @keyframes in {
+    @keyframes inright {
         from{
             opacity: 0;
             transform: translateX(-500px);
@@ -55,7 +55,17 @@ const LeftSide = styled.div`
     max-width: 1000px;
     margin-right: 5%;
     &.view{
-        animation: in 1s ease-in-out both;
+        animation: inleft 1s ease-in-out both;
+    }
+    @keyframes inleft {
+        from{
+            opacity: 0;
+            transform: translateX(500px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 `;
 /** 텍스트 콘테이너 */
