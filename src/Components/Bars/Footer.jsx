@@ -16,7 +16,7 @@ const Container = styled.div`
     height: fit-content;
     margin: 100px 0 0;
 `;
-/** footer 메인 리스트 */
+/** 메인 리스트 */
 const MainList = styled.ul`
     display: flex;
     width: 60%;
