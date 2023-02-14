@@ -8,8 +8,8 @@ import ErrorPage from './Pages/ErrorPage';
 import StatPage from './Pages/StatPage';
 import ContactPage from './Pages/ContactPage';
 import AboutPage from './Pages/AboutPage';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
+import Navbar from './Components/Bars/Navbar';
+import Footer from './Components/Bars/Footer';
 import ProjectPageCloneCoding from './Pages/ProjectPageCloneCoding';
 import ProjectPageOriginalProject from './Pages/ProjectPageOriginalProject';
 
