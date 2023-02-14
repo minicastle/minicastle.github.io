@@ -83,6 +83,7 @@ function SkillsGraph() {
         list.forEach((e)=>{
             io.observe(e);
         })
+        return()=>{io.disconnect}
     },[])
     return (
         <Container>

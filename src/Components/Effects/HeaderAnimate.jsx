@@ -38,6 +38,7 @@ const Head2 = styled.div`
     color: white;
     letter-spacing: 10px;
 `;
+/** 홈페이지의 움직이는 제목 component */
 function HeaderAnimate() {
     const container = useRef(null);
     const handleMove = useCallback((e)=>{

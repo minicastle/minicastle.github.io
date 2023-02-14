@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { ContentsButtonSize1 } from '../Components/Buttons/ContentsButton';
 import { Link } from 'react-router-dom';
-import HeaderAnimate from '../Components/HeaderAnimate';
+import HeaderAnimate from '../Components/Effects/HeaderAnimate';
 import AboutMySelf from '../Components/About/AboutMySelf';
 
 const Container = styled.div`
