@@ -33,6 +33,17 @@ const MainListItem = styled.li`
     justify-content: center;
     align-items: flex-start;
     font-size: 25px;
+    position: relative;
+    :hover{
+        ::after{
+            content: '▶';
+            color: #C9F4AA;
+            position: absolute;
+            top: 0;
+            font-size: 20px;
+            left: -25px;
+        }
+    }
 `;
 /** 서브 리스트 */
 const SubList = styled.ul`
@@ -48,6 +59,18 @@ const SubList = styled.ul`
 /** 서브 리스트 아이템 */
 const SubListItem = styled.li`
     font-size: 20px;
+    position: relative;
+    transition: 500ms ease-in-out;
+    :hover{
+        ::after{
+            content: '●';
+            color: #E5FDD1;
+            position: absolute;
+            top: 7px;
+            font-size: 10px;
+            left: -15px;
+        }
+    }
 `;
 /** 나와 관련된 사이트 리스트 */
 const SiteList = styled.ul`
@@ -91,12 +114,18 @@ function Footer() {
                         <Link to={'/contact?#instagram'}><SubListItem>Instagram</SubListItem></Link>
                     </SubList>
                 </MainListItem>
-                <Link to={'/stats'}><MainListItem>Stats</MainListItem></Link>
+                <MainListItem>
+                    <Link to={'/stats'}>Stats</Link>
+                    <SubList>
+                        <Link to={'/stats?#language'}><SubListItem>Language</SubListItem></Link>
+                        <Link to={'/stats?#library'}><SubListItem>Library</SubListItem></Link>
+                    </SubList>
+                </MainListItem>
             </MainList>
             <SiteList>
                 <Link to={'https://github.com/minicastle'} target='blank'><SiteListItem><BsGithub/></SiteListItem></Link>
                 <a href='mailto:minicastle@kakao.com'><SiteListItem><AiOutlineMail/></SiteListItem></a>
-                <Link to={'https://www.instagram.com/jk598200/'}><SiteListItem><AiFillInstagram/></SiteListItem></Link>
+                <Link to={'https://www.instagram.com/jk598200/'} target='blank'><SiteListItem><AiFillInstagram/></SiteListItem></Link>
             </SiteList>
         </Container>
     )

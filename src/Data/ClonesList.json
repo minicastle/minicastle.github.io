@@ -1,0 +1,26 @@
+[
+    {
+        "title":"카카오",
+        "img":"../dataImages/kakao.PNG",
+        "info":"",
+        "tags":["Clone","React","contents-board"],
+        "link":"https://minicastle.github.io/Clone-Kakao/",
+        "git":"https://github.com/minicastle/Clone-Kakao"
+    },
+    {
+        "title":"Colco",
+        "img":"../dataImages/colco.PNG",
+        "info":"",
+        "tags":["Clone","React","App"],
+        "link":"https://minicastle.github.io/Clone-Colco/",
+        "git":"https://github.com/minicastle/Clone-Colco"
+    },
+    {
+        "title":"Jolly-Flow",
+        "img":"../dataImages/jollyflow.PNG",
+        "info":"",
+        "tags":["Clone","React","christmas"],
+        "link":"https://minicastle.github.io/Clone-JollyFlow/",
+        "git":"https://github.com/minicastle/Clone-JollyFlow"
+    }
+]
