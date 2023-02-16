@@ -2,10 +2,11 @@
     {
         "title":"카카오",
         "img":"../dataImages/kakao.PNG",
-        "info":"",
+        "info":"카카오 페이지의 클론코딩 페이지 입니다.",
         "tags":["Clone","React","contents-board"],
         "link":"https://minicastle.github.io/Clone-Kakao/",
-        "git":"https://github.com/minicastle/Clone-Kakao"
+        "git":"https://github.com/minicastle/Clone-Kakao",
+        "color":"E8F044"
     },
     {
         "title":"Colco",
@@ -13,7 +14,8 @@
         "info":"",
         "tags":["Clone","React","App"],
         "link":"https://minicastle.github.io/Clone-Colco/",
-        "git":"https://github.com/minicastle/Clone-Colco"
+        "git":"https://github.com/minicastle/Clone-Colco",
+        "color":"EA047E"
     },
     {
         "title":"Jolly-Flow",
@@ -21,6 +23,7 @@
         "info":"",
         "tags":["Clone","React","christmas"],
         "link":"https://minicastle.github.io/Clone-JollyFlow/",
-        "git":"https://github.com/minicastle/Clone-JollyFlow"
+        "git":"https://github.com/minicastle/Clone-JollyFlow",
+        "color":"FF6464"
     }
 ]

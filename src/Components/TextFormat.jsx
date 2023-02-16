@@ -23,7 +23,7 @@ color: ${(props)=>{return '#'+props.color}};
     width: max-content;
 `;
 const Text4 = styled.div`
-color: ${(props)=>{return '#'+props.color}};
+    color: ${(props)=>{return '#'+props.color}};
     font-size: 30px;
     font-family: 'LineSeed';
     position: relative;
