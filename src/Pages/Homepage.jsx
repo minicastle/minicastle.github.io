@@ -12,18 +12,16 @@ const Container = styled.div`
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: #2b2b2b;
     color: white;
-    background-image: url(./images/backDefault.png);
 `;
 /** /home 로딩시 페이지 */
 function Homepage() {
     return (
         <Container>
-            <HeaderAnimate/>
+            <HeaderAnimate main='Portfolio' sub='made by.minicastle'/>
             <AboutMySelf/>
-            <Link to={'/projects/clone-codings'}><ContentsButtonSize1 borderColor={'FB2576'} imgsrc={'../images/clones.png'}>Clone Codings</ContentsButtonSize1></Link>
-            <Link to={'/projects/original-projects'}><ContentsButtonSize1 borderColor={'FCE700'} imgsrc={'../images/originals.png'}>Original projects</ContentsButtonSize1></Link>
+            <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}><ContentsButtonSize1 borderColor={'FB2576'} imgsrc={'../images/clones.png'}>Project Page</ContentsButtonSize1></Link>
+            <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}><ContentsButtonSize1 borderColor={'FCE700'} imgsrc={'../images/originals.png'}>About Page</ContentsButtonSize1></Link>
         </Container>
     )
 }

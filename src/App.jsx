@@ -10,8 +10,6 @@ import ContactPage from './Pages/ContactPage';
 import AboutPage from './Pages/AboutPage';
 import Navbar from './Components/Bars/Navbar';
 import Footer from './Components/Bars/Footer';
-import ProjectPageCloneCoding from './Pages/ProjectPageCloneCoding';
-import ProjectPageOriginalProject from './Pages/ProjectPageOriginalProject';
 
 const Container = styled.div`
     display: flex;
@@ -20,6 +18,7 @@ const Container = styled.div`
     flex-direction: column;
     margin: 0;
     background-color: #2b2b2b;
+    background-image: url(./images/backDefault.png);
 `;
 
 function App() {
@@ -43,20 +42,6 @@ function App() {
                         <>
                             <Navbar pageData='projects'/>
                             <ProjectPage/>
-                            <Footer/>
-                        </>
-                    }/>
-                    <Route path='/projects/clone-codings' element={
-                        <>
-                            <Navbar pageData='projects'/>
-                            <ProjectPageCloneCoding/>
-                            <Footer/>
-                        </>
-                    }/>
-                    <Route path='/projects/original-projects' element={
-                        <>
-                                <Navbar pageData='projects'/>
-                            <ProjectPageOriginalProject/>
                             <Footer/>
                         </>
                     }/>

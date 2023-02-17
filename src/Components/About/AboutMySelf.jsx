@@ -88,10 +88,6 @@ const Info = styled.div`
     font-family: 'LineSeed';
     margin-top: 10px;
 `;
-/** 콘텐츠 인식 */
-const Observer = styled.div`
-    display: flex;
-`;
 /** 홈페이지의 설명 component */
 function AboutMySelf() {
     useEffect(()=>{
@@ -102,7 +98,7 @@ function AboutMySelf() {
                     item.target.classList.add('view');
                 }
             })
-        },{rootMargin:'-100px'});
+        },{rootMargin:'-250px'});
         /** 할당 컨텐츠 */
         const list = document.querySelectorAll('#item');
         list.forEach((e)=>{

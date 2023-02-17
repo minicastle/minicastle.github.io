@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import styled from '@emotion/styled';
-import { Type2, Type4 } from '../TextFormat';
+import { Type4 } from '../TextFormat';
 import { Link } from 'react-router-dom';
 
 const Container = styled.div`
@@ -16,8 +16,8 @@ const Container = styled.div`
 /** 게시판 형태의 아이템 콘테이너 */
 const BoardContainer = styled.div`
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     width: 100%;
     gap: 50px;
     color: white;
@@ -25,6 +25,7 @@ const BoardContainer = styled.div`
 `;
 /** 게시판 아이템 */
 const BoardItem = styled.div`
+    opacity: 0;
     user-select: none;
     position: relative;
     transition: 0.3s ease-in-out;
@@ -32,11 +33,13 @@ const BoardItem = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 470px;
     margin-bottom: 50px;
-    max-width: 470px;
     box-sizing: border-box;
     box-shadow: 0px 0px 5px black;
+    &.view{
+        opacity: 1;
+    }
     &::before{
         position: absolute;
         content: '';
@@ -65,7 +68,7 @@ const BoardItem = styled.div`
         #title{
             transition: 0.3s ease-in-out;
             box-shadow:  0 0 4px #414141,
-            0 0 0 400px ${(props)=>{return '#'+props.color}};
+            0 0 0 1000px ${(props)=>{return '#'+props.color}};
         }
     }
 `;
@@ -96,12 +99,14 @@ const TitleContain = styled.div`
 /** 게시판 아이템 이미지 */
 const BoardItemImage = styled.img`
     margin: 0 10px;
-    width: 100%;
+    height: 100%;
+    max-height: 250px;
 `;
 /** 태그 콘테이너 */
 const Tags = styled.div`
     margin: 10px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
@@ -110,6 +115,7 @@ const Tags = styled.div`
 /** 태그 아이템 */
 const Tag = styled.div`
     display: flex;
+    white-space: nowrap;
     justify-content: flex-start;
     align-items: center;
     font-family: 'ok';
@@ -144,21 +150,51 @@ const LinkButton = styled.div`
 `;
 
 function GridBoard({clone=[],original=[]}) {
+    useEffect(()=>{
+        let io = new IntersectionObserver((e)=>{
+            e.forEach((entry)=>{
+                if(entry.intersectionRatio>0){
+                    entry.target.classList.add('view');
+                }
+            })
+        },{rootMargin:"-200px"})
+        const list=document.querySelectorAll('#item');
+        list.forEach((e)=>{
+            io.observe(e);
+        })
+    },[])
     /** 게시판 아이템 생성기 */
-    const Generater = useCallback((e)=>{
+    const Generater = useCallback((a,b)=>{
         let contents = [];
-        for(let i = 0;i<e.length;i++){
+        for(let i = 0;i<a.length;i++){
             contents.push(
-                <BoardItem color={e[i].color}>
-                    <BoardInnerContainer>
-                        <TitleContain id='title' color={e[i].color}><Type4>{e[i].title}</Type4></TitleContain>
-                        <BoardItemImage src={e[i].img} alt=''/>
-                        <LinkButtons>
-                            <Link to={`${e[i].git}`} target={'_blank'}><LinkButton bgcolor={'F0FF42'} color={'000000'}>SOURCE</LinkButton></Link>
-                            <Link to={`${e[i].link}`} target={'_blank'}><LinkButton bgcolor={'72FFFF'} color={'000000'}>PREVIEW</LinkButton></Link>
+                <BoardItem id='item' color={a[i].color} key={`a boarditem ${i}`}>
+                    <BoardInnerContainer key={`a boardinnerContainer ${i}`}>
+                        <TitleContain key={`a titlecontainer ${i}`} id='title' color={a[i].color}><Type4 key={`a type4 ${i}`}>{a[i].title}</Type4></TitleContain>
+                        <BoardItemImage key={`a boarditemimage ${i}`} src={a[i].img} alt=''/>
+                        <LinkButtons key={`a linkbuttons ${i}`}>
+                            <Link key={`a link1 ${i}`} to={`${a[i].git}`} target={'_blank'}><LinkButton key={`a linkbutton1 ${i}`} bgcolor={'F0FF42'} color={'000000'}>SOURCE</LinkButton></Link>
+                            <Link key={`a link2 ${i}`} to={`${a[i].link}`} target={'_blank'}><LinkButton key={`a linkbutton2 ${i}`} bgcolor={'72FFFF'} color={'000000'}>PREVIEW</LinkButton></Link>
                         </LinkButtons>
-                        <Tags>
-                            {TagGen(e[i])}
+                        <Tags key={`a tags ${i}`}>
+                            {TagGen(a[i])}
+                        </Tags>
+                    </BoardInnerContainer>
+                </BoardItem>
+            )
+        }
+        for(let i = 0;i<b.length;i++){
+            contents.push(
+                <BoardItem id='item' color={b[i].color} key={`b boarditem ${i}`}>
+                    <BoardInnerContainer key={`b boardinnerContainer ${i}`}>
+                        <TitleContain key={`b titlecontainer ${i}`} id='title' color={b[i].color}><Type4 key={`b type4 ${i}`}>{b[i].title}</Type4></TitleContain>
+                        <BoardItemImage key={`b boarditemimage ${i}`} src={b[i].img} alt=''/>
+                        <LinkButtons key={`b linkbuttons ${i}`}>
+                            <Link key={`b link1 ${i}`} to={`${b[i].git}`} target={'_blank'}><LinkButton key={`b linkbutton1 ${i}`} bgcolor={'F0FF42'} color={'000000'}>SOURCE</LinkButton></Link>
+                            <Link key={`b link2 ${i}`} to={`${b[i].link}`} target={'_blank'}><LinkButton key={`b linkbutton2 ${i}`} bgcolor={'72FFFF'} color={'000000'}>PREVIEW</LinkButton></Link>
+                        </LinkButtons>
+                        <Tags key={`b tags ${i}`}>
+                            {TagGen(b[i])}
                         </Tags>
                     </BoardInnerContainer>
                 </BoardItem>
@@ -170,28 +206,16 @@ function GridBoard({clone=[],original=[]}) {
     const TagGen = useCallback((e)=>{
         let contents=[];
         for(let i = 0;i<e.tags.length;i++){
-            contents.push(<Tag>#{e.tags[i]}</Tag>);
+            contents.push(<Tag key={`tag${i}`}>#{e.tags[i]}</Tag>);
         }
         return contents;
     },[])
 
     return (
         <Container>
-            {clone.length===0?"":
-            <>
-                <Type2>Clone Projects</Type2>
-                <BoardContainer>
-                    {Generater(clone)}
-                </BoardContainer>
-            </>
-            }
-            {original.length===0?"":
-            <>
-                <Type2>Original Projects</Type2>
-                <BoardContainer>
-                    {Generater(original)}
-                </BoardContainer>
-            </>}
+            <BoardContainer>
+                {Generater(clone,original)}
+            </BoardContainer>
         </Container>
     )
 }

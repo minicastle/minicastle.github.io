@@ -61,17 +61,17 @@ const MenuListItem = styled.li`
 function Navbar({pageData='home'}) {
     return (
         <Container>
-            <Link to="/home">
+            <Link to="/home" onClick={()=>{window.scrollTo(0,0)}}>
                 <NavHeader>
                     <NavIcon src='../../Logo.png'/>
                     <NavTitle>Minicastle</NavTitle>
                 </NavHeader>
             </Link>
             <MenuList>
-                <Link to={'/projects'}><MenuListItem pageState={pageData==='projects'}>Projects</MenuListItem></Link>
-                <Link to={'/about'}><MenuListItem pageState={pageData==='about'}>About</MenuListItem></Link>
-                <Link to={'/contact'}><MenuListItem pageState={pageData==='contact'}>Contact</MenuListItem></Link>
-                <Link to={'/stats'}><MenuListItem pageState={pageData==='stats'}>Stats</MenuListItem></Link>
+                <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='projects'}>Projects</MenuListItem></Link>
+                <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='about'}>About</MenuListItem></Link>
+                <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='contact'}>Contact</MenuListItem></Link>
+                <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='stats'}>Stats</MenuListItem></Link>
             </MenuList>
         </Container>
     )

@@ -34,6 +34,7 @@ const MainListItem = styled.li`
     align-items: flex-start;
     font-size: 25px;
     position: relative;
+    gap: 30px;
     :hover{
         ::after{
             content: '▶';
@@ -53,7 +54,6 @@ const SubList = styled.ul`
     justify-content: center;
     align-items: flex-start;
     gap: 30px;
-    margin-top: 40px;
     padding: 0;
 `;
 /** 서브 리스트 아이템 */
@@ -93,32 +93,31 @@ function Footer() {
         <Container>
             <MainList>
                 <MainListItem>
-                    <Link to={'/projects'}>Projects</Link>
+                    <Link to={'/home'} onClick={()=>{window.scrollTo(0,0)}}>Home</Link>
+                </MainListItem>
+                <MainListItem>
+                    <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}>Projects</Link>
+                </MainListItem>
+                <MainListItem>
+                <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}>About</Link>
                     <SubList>
-                        <Link to={'/projects/clone-codings'}><SubListItem>Clones</SubListItem></Link>
-                        <Link to={'/projects/original-projects'}><SubListItem>Original</SubListItem></Link>
+                        <Link to={'/about#school'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>School</SubListItem></Link>
+                        <Link to={'/about#career'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Career</SubListItem></Link>
                     </SubList>
                 </MainListItem>
                 <MainListItem>
-                <Link to={'/about'}>About</Link>
+                    <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
                     <SubList>
-                        <Link to={'/about?#school'}><SubListItem>School</SubListItem></Link>
-                        <Link to={'/about?#carrer'}><SubListItem>Career</SubListItem></Link>
+                        <Link to={'/contact?#email'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>E-mail</SubListItem></Link>
+                        <Link to={'/contact?#git'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Git</SubListItem></Link>
+                        <Link to={'/contact?#instagram'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Instagram</SubListItem></Link>
                     </SubList>
                 </MainListItem>
                 <MainListItem>
-                    <Link to={'/contact'}>Contact</Link>
+                    <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}>Stats</Link>
                     <SubList>
-                        <Link to={'/contact?#email'}><SubListItem>E-mail</SubListItem></Link>
-                        <Link to={'/contact?#git'}><SubListItem>Git</SubListItem></Link>
-                        <Link to={'/contact?#instagram'}><SubListItem>Instagram</SubListItem></Link>
-                    </SubList>
-                </MainListItem>
-                <MainListItem>
-                    <Link to={'/stats'}>Stats</Link>
-                    <SubList>
-                        <Link to={'/stats?#language'}><SubListItem>Language</SubListItem></Link>
-                        <Link to={'/stats?#library'}><SubListItem>Library</SubListItem></Link>
+                        <Link to={'/stats?#language'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Language</SubListItem></Link>
+                        <Link to={'/stats?#library'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Library</SubListItem></Link>
                     </SubList>
                 </MainListItem>
             </MainList>
