@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import SkillsGraph from './SkillsGraph';
 import AboutContents from './AboutContents';
 import { Type3 } from '../TextFormat';
+import WobbleTop from '../Effects/WobbleTop';
+import WobbleVertical from '../Effects/WobbleVertical';
 
 const Container = styled.div`
     display: flex;
@@ -114,7 +116,7 @@ function AboutMySelf() {
             <LeftSide id='item'>
                 <AboutContents imageSrc='./images/sudologo.png'>
                     <TextContainer>
-                        <TextBorder><Type3 color='00337C'>수도전기 공업고등학교</Type3></TextBorder>
+                        <WobbleVertical><TextBorder><Type3 color='00337C'>수도전기 공업고등학교</Type3></TextBorder></WobbleVertical>
                         <Info> 정보통신 학과 : 2016년도 입학 ~ 2019년도 졸업</Info>
                         <Info> 수도전기 공업고등학교는 한국전력공사의 지원으로 설립되었습니다.</Info>
                         <Info> 국내 최고의 '마이스터고'라는 불리우며 많은 인재를 배출했습니다.</Info>
@@ -126,7 +128,7 @@ function AboutMySelf() {
             <RightSide id='item'>
                 <AboutContents imageSrc='./images/dasonlogo.png'>
                     <TextContainer>
-                        <Type3 color='89D36F'>다손테크 주식회사</Type3>
+                        <WobbleTop><Type3 color='89D36F'>다손테크 주식회사</Type3></WobbleTop>
                         <Info> 2019.11 입사 ~ 2020.07 퇴사</Info>
                         <Info> 근무중에는 SCADA 시스템을 설계하고 Client가 사용할 UI설계</Info>
                         <Info> 서버렉 설계업무를 진행하였습니다.</Info>

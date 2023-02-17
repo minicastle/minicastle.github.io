@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { Type2, Type4 } from '../TextFormat';
+import WobbleTop from '../Effects/WobbleTop';
 
 /** 총 콘텐츠 컨테이너 */
 const Container = styled.div`
@@ -87,8 +88,8 @@ function SkillsGraph() {
     },[])
     return (
         <Container>
-            <Type2>My Skills</Type2>
-            <div style={{width:'80%'}}><Type4>Front End</Type4></div>
+            <Type2><WobbleTop>My</WobbleTop> <WobbleTop>Skills</WobbleTop></Type2>
+            <div style={{width:'80%'}}><WobbleTop><Type4>Front End</Type4></WobbleTop></div>
             <Skill>
                 <SkillName>Javascript</SkillName>
                 <SkillGraph><SkillGraphInner id='item' color='#F7DF1E' value={80}/></SkillGraph>
@@ -113,7 +114,7 @@ function SkillsGraph() {
                 <SkillName>electron</SkillName>
                 <SkillGraph><SkillGraphInner id='item' color='#47848F' value={50}/></SkillGraph>
             </Skill>
-            <div style={{width:'80%'}}><Type4>Back End</Type4></div>
+            <div style={{width:'80%'}}><WobbleTop><Type4>Back End</Type4></WobbleTop></div>
             <Skill>
                 <SkillName>Linux</SkillName>
                 <SkillGraph><SkillGraphInner id='item' color='#FCC624' value={70}/></SkillGraph>

@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import WobbleTop from '../Effects/WobbleTop';
+import WobbleVertical from '../Effects/WobbleVertical';
 
 const Container = styled.div`
     display: flex;
@@ -62,16 +64,18 @@ function Navbar({pageData='home'}) {
     return (
         <Container>
             <Link to="/home" onClick={()=>{window.scrollTo(0,0)}}>
-                <NavHeader>
-                    <NavIcon src='../../Logo.png'/>
-                    <NavTitle>Minicastle</NavTitle>
-                </NavHeader>
+                <WobbleVertical>
+                    <NavHeader>
+                        <NavIcon src='../../Logo.png'/>
+                        <NavTitle>Minicastle</NavTitle>
+                    </NavHeader>
+                </WobbleVertical>
             </Link>
             <MenuList>
-                <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='projects'}>Projects</MenuListItem></Link>
-                <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='about'}>About</MenuListItem></Link>
-                <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='contact'}>Contact</MenuListItem></Link>
-                <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='stats'}>Stats</MenuListItem></Link>
+                <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='projects'}><WobbleTop>Projects</WobbleTop></MenuListItem></Link>
+                <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='about'}><WobbleTop>About</WobbleTop></MenuListItem></Link>
+                <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='contact'}><WobbleTop>Contact</WobbleTop></MenuListItem></Link>
+                <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='stats'}><WobbleTop>Stats</WobbleTop></MenuListItem></Link>
             </MenuList>
         </Container>
     )

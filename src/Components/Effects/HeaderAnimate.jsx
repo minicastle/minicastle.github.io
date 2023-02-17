@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef } from 'react';
 import styled from '@emotion/styled';
+import WobbleTop from './WobbleTop';
 
 const Container = styled.div`
     display: flex;
@@ -61,8 +62,10 @@ function HeaderAnimate({main='main text',sub='sub text'}) {
     return (
         <Container ref={container}>
         <Head>
-            <Head1>{main}</Head1>
-            <Head2>{sub}</Head2>
+            <WobbleTop>
+                <Head1>{main}</Head1>
+                <Head2>{sub}</Head2>
+            </WobbleTop>
         </Head>
             <Observe className="observe" data-value='8' src="../headerAnimate/image1.png"/>
             <Observe className="observe" data-value='10' src="../headerAnimate/image2.png"/>

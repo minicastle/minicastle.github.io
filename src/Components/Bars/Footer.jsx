@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import {BsGithub} from 'react-icons/bs';
 import {AiOutlineMail,AiFillInstagram} from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import WobbleTop from '../Effects/WobbleTop';
+import WobbleVertical from '../Effects/WobbleVertical';
 
 const Container = styled.div`
     display: flex;
@@ -93,38 +95,38 @@ function Footer() {
         <Container>
             <MainList>
                 <MainListItem>
-                    <Link to={'/home'} onClick={()=>{window.scrollTo(0,0)}}>Home</Link>
+                    <Link to={'/home'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Home</WobbleTop></Link>
                 </MainListItem>
                 <MainListItem>
-                    <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}>Projects</Link>
+                    <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Projects</WobbleTop></Link>
                 </MainListItem>
                 <MainListItem>
-                <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}>About</Link>
+                <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>About</WobbleTop></Link>
                     <SubList>
-                        <Link to={'/about#school'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>School</SubListItem></Link>
-                        <Link to={'/about#career'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Career</SubListItem></Link>
+                        <Link to={'/about#school'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>School</WobbleTop></SubListItem></Link>
+                        <Link to={'/about#career'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Career</WobbleTop></SubListItem></Link>
                     </SubList>
                 </MainListItem>
                 <MainListItem>
-                    <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}>Contact</Link>
+                    <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Contact</WobbleTop></Link>
                     <SubList>
-                        <Link to={'/contact?#email'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>E-mail</SubListItem></Link>
-                        <Link to={'/contact?#git'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Git</SubListItem></Link>
-                        <Link to={'/contact?#instagram'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Instagram</SubListItem></Link>
+                        <Link to={'/contact?#email'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>E-mail</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact?#git'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Git</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact?#instagram'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Instagram</WobbleTop></SubListItem></Link>
                     </SubList>
                 </MainListItem>
                 <MainListItem>
-                    <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}>Stats</Link>
+                    <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Stats</WobbleTop></Link>
                     <SubList>
-                        <Link to={'/stats?#language'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Language</SubListItem></Link>
-                        <Link to={'/stats?#library'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem>Library</SubListItem></Link>
+                        <Link to={'/stats?#language'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Language</WobbleTop></SubListItem></Link>
+                        <Link to={'/stats?#library'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Library</WobbleTop></SubListItem></Link>
                     </SubList>
                 </MainListItem>
             </MainList>
             <SiteList>
-                <Link to={'https://github.com/minicastle'} target='blank'><SiteListItem><BsGithub/></SiteListItem></Link>
-                <a href='mailto:minicastle@kakao.com'><SiteListItem><AiOutlineMail/></SiteListItem></a>
-                <Link to={'https://www.instagram.com/jk598200/'} target='blank'><SiteListItem><AiFillInstagram/></SiteListItem></Link>
+                <WobbleVertical><Link to={'https://github.com/minicastle'} target='blank'><SiteListItem><BsGithub/></SiteListItem></Link></WobbleVertical>
+                <WobbleVertical><a href='mailto:minicastle@kakao.com'><SiteListItem><AiOutlineMail/></SiteListItem></a></WobbleVertical>
+                <WobbleVertical><Link to={'https://www.instagram.com/jk598200/'} target='blank'><SiteListItem><AiFillInstagram/></SiteListItem></Link></WobbleVertical>
             </SiteList>
         </Container>
     )

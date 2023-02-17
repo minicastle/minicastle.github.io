@@ -16,9 +16,12 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    height: 100%;
     margin: 0;
     background-color: #2b2b2b;
     background-image: url(./images/backDefault.png);
+    position: relative;
 `;
 
 function App() {
