@@ -21,7 +21,7 @@ const Observe = styled.img`
 const Head = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     z-index: 10;
     text-shadow: 5px 5px 5px black;
@@ -61,12 +61,12 @@ function HeaderAnimate({main='main text',sub='sub text'}) {
     },[])
     return (
         <Container ref={container}>
-        <Head>
-            <WobbleTop>
-                <Head1>{main}</Head1>
-                <Head2>{sub}</Head2>
-            </WobbleTop>
-        </Head>
+            <Head>
+                <WobbleTop>
+                            <Head1>{main}</Head1>
+                            <Head2>{sub}</Head2>
+                </WobbleTop>
+            </Head>
             <Observe className="observe" data-value='8' src="../headerAnimate/image1.png"/>
             <Observe className="observe" data-value='10' src="../headerAnimate/image2.png"/>
             <Observe className="observe" data-value='-3' src="../headerAnimate/image3.png"/>

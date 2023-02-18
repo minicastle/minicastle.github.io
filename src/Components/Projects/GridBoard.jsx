@@ -11,7 +11,6 @@ const Container = styled.div`
     max-width: 1030px;
     width: 100%;
     gap: 100px;
-    margin-top: 5%;
 `;
 /** 게시판 형태의 아이템 콘테이너 */
 const BoardContainer = styled.div`

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-    display: inline-block;
+    display: inline-block;;
     transform-origin: 0 100%;
     @include hideTapHighlightColor();
     @include hardwareAccel();
