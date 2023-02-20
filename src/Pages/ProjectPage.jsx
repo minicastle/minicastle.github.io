@@ -10,6 +10,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-bottom: 100px;
 `;
 /** /projects 로딩시 사용페이지 */
 function ProjectPage() {

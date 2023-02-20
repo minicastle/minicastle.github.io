@@ -88,7 +88,7 @@ function SkillsGraph() {
     },[])
     return (
         <Container>
-            <Type2><WobbleTop>My</WobbleTop> <WobbleTop>Skills</WobbleTop></Type2>
+            <Type2><WobbleTop>My Skills</WobbleTop></Type2>
             <div style={{width:'80%'}}><WobbleTop><Type4>Front End</Type4></WobbleTop></div>
             <Skill>
                 <SkillName>Javascript</SkillName>

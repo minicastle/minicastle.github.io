@@ -63,8 +63,8 @@ function HeaderAnimate({main='main text',sub='sub text'}) {
         <Container ref={container}>
             <Head>
                 <WobbleTop>
-                            <Head1>{main}</Head1>
-                            <Head2>{sub}</Head2>
+                    <Head1>{main}</Head1>
+                    <Head2>{sub}</Head2>
                 </WobbleTop>
             </Head>
             <Observe className="observe" data-value='8' src="../headerAnimate/image1.png"/>

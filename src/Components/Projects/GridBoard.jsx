@@ -170,7 +170,7 @@ function GridBoard({clone=[],original=[]}) {
                 <BoardItem id='item' color={a[i].color} key={`a boarditem ${i}`}>
                     <BoardInnerContainer key={`a boardinnerContainer ${i}`}>
                         <TitleContain key={`a titlecontainer ${i}`} id='title' color={a[i].color}><Type4 key={`a type4 ${i}`}>{a[i].title}</Type4></TitleContain>
-                        <BoardItemImage key={`a boarditemimage ${i}`} src={a[i].img} alt=''/>
+                        <BoardItemImage loading='lazy' key={`a boarditemimage ${i}`} src={a[i].img} alt=''/>
                         <LinkButtons key={`a linkbuttons ${i}`}>
                             <Link key={`a link1 ${i}`} to={`${a[i].git}`} target={'_blank'}><LinkButton key={`a linkbutton1 ${i}`} bgcolor={'F0FF42'} color={'000000'}>SOURCE</LinkButton></Link>
                             <Link key={`a link2 ${i}`} to={`${a[i].link}`} target={'_blank'}><LinkButton key={`a linkbutton2 ${i}`} bgcolor={'72FFFF'} color={'000000'}>PREVIEW</LinkButton></Link>

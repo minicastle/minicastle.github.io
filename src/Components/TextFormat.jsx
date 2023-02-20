@@ -16,7 +16,7 @@ color: ${(props)=>{return '#'+props.color}};
     width: max-content;
 `;
 const Text3 = styled.div`
-color: ${(props)=>{return '#'+props.color}};
+    color: ${(props)=>{return '#'+props.color}};
     font-size: 50px;
     font-family: 'LineSeed';
     position: relative;

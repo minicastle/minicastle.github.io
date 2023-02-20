@@ -13,6 +13,7 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     color: white;
+    margin-bottom: 100px;
 `;
 /** /home 로딩시 페이지 */
 function Homepage() {

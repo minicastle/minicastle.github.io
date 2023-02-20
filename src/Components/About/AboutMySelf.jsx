@@ -113,7 +113,7 @@ function AboutMySelf() {
             <CenterItem>
                 <SkillsGraph/>
             </CenterItem>
-            <LeftSide id='item'>
+            <a><LeftSide id='item'>
                 <AboutContents imageSrc='./images/sudologo.png'>
                     <TextContainer>
                         <WobbleVertical><TextBorder><Type3 color='00337C'>수도전기 공업고등학교</Type3></TextBorder></WobbleVertical>
@@ -125,6 +125,7 @@ function AboutMySelf() {
                     </TextContainer>
                 </AboutContents>
             </LeftSide>
+            </a>
             <RightSide id='item'>
                 <AboutContents imageSrc='./images/dasonlogo.png'>
                     <TextContainer>

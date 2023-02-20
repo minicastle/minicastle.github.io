@@ -16,7 +16,6 @@ const Container = styled.div`
     width: 100%;
     max-height: 400px;
     height: fit-content;
-    margin: 100px 0 0;
 `;
 /** 메인 리스트 */
 const MainList = styled.ul`
@@ -95,9 +94,6 @@ function Footer() {
         <Container>
             <MainList>
                 <MainListItem>
-                    <Link to={'/home'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Home</WobbleTop></Link>
-                </MainListItem>
-                <MainListItem>
                     <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Projects</WobbleTop></Link>
                 </MainListItem>
                 <MainListItem>
@@ -110,16 +106,16 @@ function Footer() {
                 <MainListItem>
                     <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Contact</WobbleTop></Link>
                     <SubList>
-                        <Link to={'/contact?#email'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>E-mail</WobbleTop></SubListItem></Link>
-                        <Link to={'/contact?#git'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Git</WobbleTop></SubListItem></Link>
-                        <Link to={'/contact?#instagram'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Instagram</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact#email'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>E-mail</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact#git'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Git</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact#address'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Address</WobbleTop></SubListItem></Link>
                     </SubList>
                 </MainListItem>
                 <MainListItem>
                     <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Stats</WobbleTop></Link>
                     <SubList>
-                        <Link to={'/stats?#language'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Language</WobbleTop></SubListItem></Link>
-                        <Link to={'/stats?#library'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Library</WobbleTop></SubListItem></Link>
+                        <Link to={'/stats#language'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Language</WobbleTop></SubListItem></Link>
+                        <Link to={'/stats#library'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Library</WobbleTop></SubListItem></Link>
                     </SubList>
                 </MainListItem>
             </MainList>
