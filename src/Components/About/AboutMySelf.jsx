@@ -81,7 +81,7 @@ const TextContainer = styled.div`
 const TextBorder = styled.div`
     display: flex;
     text-shadow: -1px 0 white,1px 0 white,0 1px white,0 -1px white;
-`
+`;
 /** information */
 const Info = styled.div`
     display: flex;
@@ -121,7 +121,7 @@ function AboutMySelf() {
                         <Info> 수도전기 공업고등학교는 한국전력공사의 지원으로 설립되었습니다.</Info>
                         <Info> 국내 최고의 '마이스터고'라는 불리우며 많은 인재를 배출했습니다.</Info>
                         <Info> 자신의 꿈을 키워나가는 학교라는 목적성을 가지고</Info>
-                        <Info> 학생모두가 현직에서의 업무능력을 키우기 위해 노력하고 있습니다.</Info>
+                        <Info> 학생 모두가 현직에서의 업무능력을 키우기 위해 노력하고 있습니다.</Info>
                     </TextContainer>
                 </AboutContents>
             </LeftSide>

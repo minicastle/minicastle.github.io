@@ -35,7 +35,7 @@ const CustomButton = styled.div`
     font-size: 30px;
     opacity: 0;
     animation: Fadein 1s linear both;
-    animation-delay: 5s;
+    animation-delay: 3s;
     color: white;
     @keyframes Fadein {
         from{

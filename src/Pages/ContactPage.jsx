@@ -155,8 +155,10 @@ function ContactPage() {
                         setInnerText(e.target.value);
                     }}/>
                         <MailButton href={`mailto:minicastle@kakao.com?subject=${title}&body=${innerText}`} bgcolor='93BFCF' hovering='6096B4' color='ffffff' onClick={()=>{
-                            setTitle('');
-                            setInnerText('');
+                            setTimeout(()=>{
+                                setTitle('');
+                                setInnerText('');
+                            },200)
                         }}>Submit</MailButton>
                 </MailContainer>
             </Mail>

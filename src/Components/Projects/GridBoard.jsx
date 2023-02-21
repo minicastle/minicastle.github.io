@@ -24,10 +24,10 @@ const BoardContainer = styled.div`
 `;
 /** 게시판 아이템 */
 const BoardItem = styled.div`
+    transition: 0.4s ease-in-out;
     opacity: 0;
     user-select: none;
     position: relative;
-    transition: 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     justify-content: center;

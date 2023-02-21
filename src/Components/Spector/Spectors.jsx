@@ -56,7 +56,7 @@ function Spectors() {
         },5500);
         let frameTimeout2 = setTimeout(()=>{
             setFrame('set3');
-        },13000)
+        },11500)
 
     return ()=>{
         clearTimeout(loadTimeout1,loadTimeout2,frameTimeout1,frameTimeout2);
