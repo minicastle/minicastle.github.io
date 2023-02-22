@@ -937,7 +937,7 @@ PERFORMANCE OF THIS SOFTWARE.
     font-size: 30px;
 `;function Ei(){return z(Vg,{children:[z(Hg,{children:[s(go,{children:s(We,{to:"/projects",onClick:()=>{window.scrollTo(0,0)},children:s(ae,{children:"Projects"})})}),z(go,{children:[s(We,{to:"/about",onClick:()=>{window.scrollTo(0,0)},children:s(ae,{children:"About"})}),z(dc,{children:[s(We,{to:"/about#school",children:s(fn,{children:s(ae,{children:"School"})})}),s(We,{to:"/about#career",children:s(fn,{children:s(ae,{children:"Career"})})}),s(We,{to:"/about#education",children:s(fn,{children:s(ae,{children:"Education"})})})]})]}),z(go,{children:[s(We,{to:"/contact",onClick:()=>{window.scrollTo(0,0)},children:s(ae,{children:"Contact"})}),z(dc,{children:[s(We,{to:"/contact#email",children:s(fn,{children:s(ae,{children:"E-mail"})})}),s(We,{to:"/contact#git",children:s(fn,{children:s(ae,{children:"Git"})})}),s(We,{to:"/contact#address",children:s(fn,{children:s(ae,{children:"Address"})})})]})]})]}),z(Wg,{children:[s(yr,{children:s(We,{to:"https://github.com/minicastle",target:"blank",children:s(vo,{children:s(lg,{})})})}),s(yr,{children:s("a",{href:"mailto:minicastle@kakao.com",children:s(vo,{children:s(Ug,{})})})}),s(yr,{children:s(We,{to:"https://www.instagram.com/jk598200/",target:"blank",children:s(vo,{children:s(Fg,{})})})})]})]})}const Qg=E.div`
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     flex-direction: column;
     width: 100%;
