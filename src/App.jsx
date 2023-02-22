@@ -5,7 +5,6 @@ import styled from '@emotion/styled';
 import LoadPage from './Pages/LoadPage';
 import ProjectPage from './Pages/ProjectPage';
 import ErrorPage from './Pages/ErrorPage';
-import StatPage from './Pages/StatPage';
 import ContactPage from './Pages/ContactPage';
 import AboutPage from './Pages/AboutPage';
 import Navbar from './Components/Bars/Navbar';
