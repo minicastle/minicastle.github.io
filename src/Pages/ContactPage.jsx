@@ -134,15 +134,18 @@ function ContactPage() {
         <Container>
             <Mail>
                 <MailInfo>
-                    <a id='email'><Type4 color='ECF9FF'>Email</Type4></a>
+                    <a id='email'/>
+                    <Type4 color='ECF9FF'>Email</Type4>
                     <Type4>- minicastle@kakao.com </Type4>
                     <MailButton bgcolor='93BFCF' hovering='6096B4' color='ffffff' onClick={()=>{
                         window.navigator.clipboard.writeText('minicastle@kakao.com');
                         alert('클립보드에 메일주소( minicastle@kakao.com )가 \n복사되었습니다.');
                     }}>Copy Address</MailButton>
-                    <a id='git'><Type4> Git Hub</Type4></a>
+                    <a id='git'/>
+                    <Type4> Git Hub</Type4>
                     <Type4><a href='https://github.com/minicastle' target={'_blank'}>- https://github.com/minicastle</a></Type4>
-                    <a id='address'><Type4 color='ECF9FF'>Address</Type4></a>
+                    <a id='address'/>
+                    <Type4 color='ECF9FF'>Address</Type4>
                     <Type4> - 서울특별시 강북구 인수동 4.19로 13길</Type4>
                     <KakaoMap id='kakaomap'></KakaoMap>
                 </MailInfo>

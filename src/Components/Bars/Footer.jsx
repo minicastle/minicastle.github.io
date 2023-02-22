@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import {BsGithub} from 'react-icons/bs';
 import {AiOutlineMail,AiFillInstagram} from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import WobbleTop from '../Effects/WobbleTop';
 import WobbleVertical from '../Effects/WobbleVertical';
 
@@ -99,23 +99,17 @@ function Footer() {
                 <MainListItem>
                 <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>About</WobbleTop></Link>
                     <SubList>
-                        <Link to={'/about#school'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>School</WobbleTop></SubListItem></Link>
-                        <Link to={'/about#career'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Career</WobbleTop></SubListItem></Link>
+                        <Link to={'/about#school'}><SubListItem><WobbleTop>School</WobbleTop></SubListItem></Link>
+                        <Link to={'/about#career'}><SubListItem><WobbleTop>Career</WobbleTop></SubListItem></Link>
+                        <Link to={'/about#education'}><SubListItem><WobbleTop>Education</WobbleTop></SubListItem></Link>
                     </SubList>
                 </MainListItem>
                 <MainListItem>
                     <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Contact</WobbleTop></Link>
                     <SubList>
-                        <Link to={'/contact#email'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>E-mail</WobbleTop></SubListItem></Link>
-                        <Link to={'/contact#git'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Git</WobbleTop></SubListItem></Link>
-                        <Link to={'/contact#address'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Address</WobbleTop></SubListItem></Link>
-                    </SubList>
-                </MainListItem>
-                <MainListItem>
-                    <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}><WobbleTop>Stats</WobbleTop></Link>
-                    <SubList>
-                        <Link to={'/stats#language'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Language</WobbleTop></SubListItem></Link>
-                        <Link to={'/stats#library'} onClick={()=>{window.scrollTo(0,0)}}><SubListItem><WobbleTop>Library</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact#email'}><SubListItem><WobbleTop>E-mail</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact#git'}><SubListItem><WobbleTop>Git</WobbleTop></SubListItem></Link>
+                        <Link to={'/contact#address'}><SubListItem><WobbleTop>Address</WobbleTop></SubListItem></Link>
                     </SubList>
                 </MainListItem>
             </MainList>

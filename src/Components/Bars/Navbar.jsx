@@ -75,7 +75,6 @@ function Navbar({pageData='home'}) {
                 <Link to={'/projects'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='projects'}><WobbleTop>Projects</WobbleTop></MenuListItem></Link>
                 <Link to={'/about'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='about'}><WobbleTop>About</WobbleTop></MenuListItem></Link>
                 <Link to={'/contact'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='contact'}><WobbleTop>Contact</WobbleTop></MenuListItem></Link>
-                <Link to={'/stats'} onClick={()=>{window.scrollTo(0,0)}}><MenuListItem pageState={pageData==='stats'}><WobbleTop>Stats</WobbleTop></MenuListItem></Link>
             </MenuList>
         </Container>
     )

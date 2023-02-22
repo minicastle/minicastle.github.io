@@ -62,13 +62,6 @@ function App() {
                             <Footer/>
                         </>
                     }/>
-                    <Route path='/stats' element={
-                        <>
-                            <Navbar pageData={'stats'}/>
-                            <StatPage/>
-                            <Footer/>
-                        </>
-                    }/>
                     <Route path='*'element={
                         <>
                             <ErrorPage/>
