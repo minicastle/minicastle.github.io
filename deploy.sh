@@ -16,12 +16,12 @@ echo > .nojekyll
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -B main
+git checkout -B gh-pages
 git add -A
 git commit -m 'deploy'
 
 # https://<USERNAME>.github.io 에 배포
-git push -f git@github.com:minicastle/minicastle.github.io.git main
+git push -f git@github.com:minicastle/minicastle.github.io.git gh-pages
 
 # https://<USERNAME>.github.io/<REPO> 에 배포
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
