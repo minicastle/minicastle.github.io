@@ -21,11 +21,15 @@ const Container = styled.div`
 const MainList = styled.ul`
     display: flex;
     width: 60%;
-    min-width: 530px;
     list-style: none;
     justify-content: space-between;
     align-items: flex-start;
     margin: 50px 0 100px;
+    padding: 0;
+    max-width: 850px;
+    @media screen and (max-width:600px){
+        width: 80%;
+    };
 `;
 /** 메인 리스트 아이템 */
 const MainListItem = styled.li`
@@ -46,6 +50,10 @@ const MainListItem = styled.li`
             left: -25px;
         }
     }
+    @media screen and (max-width:600px){
+        font-size: 20px;
+        gap: 20px;
+    };
 `;
 /** 서브 리스트 */
 const SubList = styled.ul`
@@ -56,6 +64,9 @@ const SubList = styled.ul`
     align-items: flex-start;
     gap: 30px;
     padding: 0;
+    @media screen and (max-width:600px){
+        gap: 15px;
+    };
 `;
 /** 서브 리스트 아이템 */
 const SubListItem = styled.li`
@@ -72,6 +83,9 @@ const SubListItem = styled.li`
             left: -15px;
         }
     }
+    @media screen and (max-width:600px){
+        font-size: 18px;
+    };
 `;
 /** 나와 관련된 사이트 리스트 */
 const SiteList = styled.ul`

@@ -11,11 +11,19 @@ const Container = styled.div`
     width: 100%;
     height: 80vh;
     user-select: none;
+    @media screen and (max-width:1000px){
+        height: fit-content;
+        padding: 30px;
+        box-sizing: border-box;
+    };
 `;
 /** 감시 대상 및 움직임 지정 */
 const Observe = styled.img`
     position: absolute;
     width: 100%;
+    @media screen and (max-width:1000px){
+        display: none;
+    };
 `;
 /** 제목 컨테이너 */
 const Head = styled.div`
@@ -33,6 +41,9 @@ const Head1 = styled.div`
     color: white;
     line-height: 90px;
     letter-spacing: 20px;
+    @media screen and (max-width:600px){
+        font-size: 50px;
+    };
 `;
 /** 서브 제목 */
 const Head2 = styled.div`
@@ -40,6 +51,9 @@ const Head2 = styled.div`
     font-weight: 800;
     color: white;
     letter-spacing: 10px;
+    @media screen and (max-width:600px){
+        font-size: 20px;
+    };
 `;
 /** 홈페이지의 움직이는 제목 component */
 function HeaderAnimate({main='main text',sub='sub text'}) {

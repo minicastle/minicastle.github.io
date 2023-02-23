@@ -10,10 +10,14 @@ const Container = styled.div`
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    width: 90%;
+    width: 100%;
     background-color: #2b2b2b;
     padding: 40px 20px;
     position: relative;
+    @media screen and (max-width:700px){
+        gap: 0px;
+        padding: 0px 20px 50px;
+    };
 `;
 /** 스킬 컨테이너 */
 const Skill = styled.div`
@@ -34,6 +38,12 @@ const SkillName = styled.div`
     font-size: 25px;
     width: 40%;
     white-space: nowrap;
+    @media screen and (max-width:700px){
+        font-size: 20px;
+    };
+    @media screen and (max-width:580px){
+        font-size: 15px;
+    }
 `;
 /** 스킬 그래프 */
 const SkillGraph = styled.div`
@@ -43,6 +53,13 @@ const SkillGraph = styled.div`
     height: 20px;
     max-width: 800px;
     background-color: gray;
+    @media screen and (max-width:700px){
+        width: 200px;
+        height: 15px;
+    };
+    @media screen and (max-width:580px){
+        width: 150px;
+    }
 `;
 /** 스킬 그래프 채우기 */
 const SkillGraphInner = styled.div`
@@ -67,6 +84,17 @@ const SkillGraphInner = styled.div`
             width: 0%;
         }
     }
+    @media screen and (max-width:700px){
+        height: 15px;
+        &.view{
+            ::after{
+                content:'${(props)=>{return props.value+'%'}}';
+                position: absolute;
+                top: 12px;
+                right: 0;
+            }
+        }
+    };
 `;
 /** 나의 스킬 그래프 */
 function SkillsGraph() {
@@ -78,7 +106,7 @@ function SkillsGraph() {
                     item.target.classList.add('view');
                 }
             })
-        },{rootMargin:'-150px'});
+        },{rootMargin:'-100px'});
         /** 할당 컨텐츠 */
         const list = document.querySelectorAll('#item');
         list.forEach((e)=>{

@@ -7,6 +7,9 @@ const Text1 = styled.div`
     font-family: 'ok';
     position: relative;
     width: max-content;
+    @media screen and (max-width:600px){
+        font-size: 50px;
+    };
 `;
 const Text2 = styled.div`
 color: ${(props)=>{return '#'+props.color}};
@@ -14,6 +17,9 @@ color: ${(props)=>{return '#'+props.color}};
     font-family: 'ok';
     position: relative;
     width: max-content;
+    @media screen and (max-width:600px){
+        font-size: 35px;
+    };
 `;
 const Text3 = styled.div`
     color: ${(props)=>{return '#'+props.color}};
@@ -21,6 +27,9 @@ const Text3 = styled.div`
     font-family: 'LineSeed';
     position: relative;
     width: max-content;
+    @media screen and (max-width:600px){
+        font-size: 35px;
+    };
 `;
 const Text4 = styled.div`
     color: ${(props)=>{return '#'+props.color}};
@@ -28,6 +37,9 @@ const Text4 = styled.div`
     font-family: 'LineSeed';
     position: relative;
     width: max-content;
+    @media screen and (max-width:500px){
+        font-size: 20px;
+    };
 `;
 /** 텍스트 포멧 1  */
 function Type1({children,color='ffffff'}) {

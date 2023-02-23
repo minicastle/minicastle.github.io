@@ -21,20 +21,28 @@ const Size1Container = styled.div`
     border-radius: 20px;
     margin: 20px 0;
     :hover{
-        animation: fadein 0.2s linear both;
+        animation: grow 0.2s linear both;
         #arrow{
             &::after{
                 content: '→';
             }
         }
     }
-    @keyframes fadein {
+    @keyframes grow {
         from{
             scale: 1;
         }
         to{
             scale:1.008;
         }
+    }
+    @media screen and (max-width:1000px){
+        width: 550px;
+        height: 250px;
+    }
+    @media screen and (max-width:600px){
+        width: 350px;
+        height: 200px;
     }
 `;
 /** 자체제작 버튼 제목 */
@@ -45,6 +53,9 @@ const Size1Title = styled.div`
     z-index: 1;
     transition: 0.5s ease-in-out;
     ${(props)=>{return props.description?{border:'5px solid transparent',padding:'5px 10px'}:{border:'5px solid white',padding:'5px'}}}
+    @media screen and (max-width:600px){
+        font-size:20px;
+    };
 `;
 /** 자체제작 버튼 Arrow 콘텐츠 표시 */
 const Size1Arrow = styled.div`

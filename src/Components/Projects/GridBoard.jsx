@@ -70,6 +70,13 @@ const BoardItem = styled.div`
             0 0 0 1000px ${(props)=>{return '#'+props.color}};
         }
     }
+    @media screen and (max-width:500px){
+        width: 400px;
+        margin-bottom: 20px;
+    };
+    @media screen and (max-width:430px){
+        width: 300px;
+    };
 `;
 /** Board Item Inner Container */
 const BoardInnerContainer = styled.div`
@@ -100,6 +107,11 @@ const BoardItemImage = styled.img`
     margin: 0 10px;
     height: 100%;
     max-height: 250px;
+    @media screen and (max-width:430px){
+        height: fit-content;
+        width: 100%;
+        margin: 0;
+    };
 `;
 /** 태그 콘테이너 */
 const Tags = styled.div`
@@ -110,6 +122,9 @@ const Tags = styled.div`
     align-items: center;
     gap: 20px;
     width: 100%;
+    @media screen and (max-width:430px){
+        margin: 0;
+    };
 `;
 /** 태그 아이템 */
 const Tag = styled.div`
@@ -119,6 +134,9 @@ const Tag = styled.div`
     align-items: center;
     font-family: 'ok';
     font-size: 20px;
+    @media screen and (max-width:430px){
+        font-size: 15px;
+    };
 `;
 /** 링크 버튼 콘테이너 */
 const LinkButtons = styled.div`
@@ -128,6 +146,9 @@ const LinkButtons = styled.div`
     gap: 20px;
     margin: 20px 0 0;
     z-index: 11;
+    @media screen and (max-width:430px){
+        margin: 0;
+    };
 `;
 /** 링크 버튼 */
 const LinkButton = styled.div`
@@ -156,7 +177,7 @@ function GridBoard({clone=[],original=[]}) {
                     entry.target.classList.add('view');
                 }
             })
-        },{rootMargin:"-200px"})
+        },{rootMargin:"0px 0px -200px 0px"})
         const list=document.querySelectorAll('#item');
         list.forEach((e)=>{
             io.observe(e);

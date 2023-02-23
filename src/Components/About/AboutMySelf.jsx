@@ -15,6 +15,10 @@ const Container = styled.div`
     gap: 50px;
     margin-top: 60px;
     overflow: hidden;
+    @media screen and (max-width:600px){
+        gap: 0px;
+        margin-top: 30px;
+    };
 `;
 /** 중앙 배치되는 콘텐츠 */
 const CenterItem = styled.div`
@@ -23,6 +27,9 @@ const CenterItem = styled.div`
     align-items: center;
     width: 80%;
     max-width: 1000px;
+    @media screen and (max-width:600px){
+        width: 100%;
+    };
 `;
 /** 오른쪽으로 배치되는 콘텐츠 */
 const RightSide = styled.div`
@@ -89,6 +96,10 @@ const Info = styled.div`
     color: white;
     font-family: 'LineSeed';
     margin-top: 10px;
+    word-break: keep-all;
+    @media screen and (max-width:600px){
+        font-size:15px;
+    };
 `;
 /** 홈페이지의 설명 component */
 function AboutMySelf() {
@@ -100,7 +111,7 @@ function AboutMySelf() {
                     item.target.classList.add('view');
                 }
             })
-        },{rootMargin:'-250px'});
+        },{rootMargin:'0px 0px -250px 0px'});
         /** 할당 컨텐츠 */
         const list = document.querySelectorAll('#item');
         list.forEach((e)=>{
@@ -113,7 +124,7 @@ function AboutMySelf() {
             <CenterItem>
                 <SkillsGraph/>
             </CenterItem>
-            <a><LeftSide id='item'>
+            <LeftSide id='item'>
                 <AboutContents imageSrc='./images/sudologo.png'>
                     <TextContainer>
                         <WobbleVertical><TextBorder><Type3 color='00337C'>수도전기 공업고등학교</Type3></TextBorder></WobbleVertical>
@@ -125,7 +136,6 @@ function AboutMySelf() {
                     </TextContainer>
                 </AboutContents>
             </LeftSide>
-            </a>
             <RightSide id='item'>
                 <AboutContents imageSrc='./images/dasonlogo.png'>
                     <TextContainer>
@@ -141,7 +151,6 @@ function AboutMySelf() {
                     </TextContainer>
                 </AboutContents>
             </RightSide>
-            <LeftSide id='item'></LeftSide>
         </Container>
     )
 }
