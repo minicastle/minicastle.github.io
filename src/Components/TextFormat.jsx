@@ -37,7 +37,7 @@ const Text4 = styled.div`
     font-family: 'LineSeed';
     position: relative;
     width: max-content;
-    @media screen and (max-width:500px){
+    @media screen and (max-width:550px){
         font-size: 20px;
     };
 `;

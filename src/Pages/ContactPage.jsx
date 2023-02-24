@@ -11,6 +11,8 @@ const Container = styled.div`
     align-items: center;
     gap: 50px;
     width: 100%;
+    background-color: #2b2b2b;
+    padding-bottom: 20px;
 `;
 /** 메일 콘테이너 */
 const Mail = styled.div`
@@ -23,6 +25,9 @@ const Mail = styled.div`
     padding: 20px 50px 50px;
     box-sizing: border-box;
     gap: 50px;
+    @media screen and (max-width: 500px){
+        padding: 0 0 0 30px;
+    }
 `;
 /** 메일 설명 및 주소 콘테이너 */
 const MailInfo = styled.div`
@@ -32,6 +37,9 @@ const MailInfo = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    @media screen and (max-width: 550px){
+        margin-top: 0;
+    }
 `;
 /** 메일 보내기 콘테이너 */
 const MailContainer = styled.div`
@@ -39,13 +47,20 @@ const MailContainer = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    width: 60%;
+    width: 50%;
     gap: 20px;
-    max-width: 1000px;
-    min-width: 380px;
+    max-width: 800px;
+    min-width: 320px;
     padding: 0 20px 10px;
     box-sizing: border-box;
     border-radius: 10px;
+    @media screen and (max-width: 1000px){
+        min-width: 450px;
+    }
+    @media screen and (max-width: 550px){
+        padding: 0;
+        min-width: 320px;
+    }
 `;
 /** 메일 보내기 제목 컨테이너 */
 const MailTitleContainer = styled.div`
@@ -101,7 +116,8 @@ const MailButton = styled.a`
 `;
 /** 카카오 맵 API 콘테이너 */
 const KakaoMap = styled.div`
-    width: 450px;
+    width: 100%;
+    max-width: 450px;
     height: 330px;
 `;
 

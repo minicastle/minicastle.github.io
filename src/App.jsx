@@ -21,6 +21,7 @@ const Container = styled.div`
     background-color: #2b2b2b;
     background-image: url(./images/backDefault.png);
     position: relative;
+    /* overflow: hidden; */
 `;
 
 function App() {
