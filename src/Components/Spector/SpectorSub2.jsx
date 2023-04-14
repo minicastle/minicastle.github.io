@@ -28,7 +28,11 @@ const CornerButton = styled.div`
   justify-content: center;
   overflow: hidden;
   align-items: center;
-  background-color: white;
+  font-weight: bold;
+  gap: 5px;
+  background-color: ${(props) => {
+    return "#" + props.color;
+  }};
   color: black;
   position: relative;
   font-size: 30px;
@@ -77,6 +81,17 @@ const CornerButton = styled.div`
         bottom: 0;
         right: 0;
       }
+    }
+  }
+  opacity: 0;
+  animation: Fadein 1s linear both;
+  animation-delay: 3s;
+  @keyframes Fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 `;
