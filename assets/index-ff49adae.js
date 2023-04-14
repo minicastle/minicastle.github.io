@@ -583,7 +583,9 @@ color: ${e=>"#"+e.color};
   justify-content: center;
   overflow: hidden;
   align-items: center;
-  background-color: white;
+  font-weight: bold;
+  gap: 5px;
+  background-color: ${e=>"#"+e.color};
   color: black;
   position: relative;
   font-size: 30px;
@@ -628,6 +630,17 @@ color: ${e=>"#"+e.color};
         bottom: 0;
         right: 0;
       }
+    }
+  }
+  opacity: 0;
+  animation: Fadein 1s linear both;
+  animation-delay: 3s;
+  @keyframes Fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
 `;function ig(){return s(Ct,{children:T(ng,{children:[s(Uf,{time:2,children:s(Ll,{children:"포트폴리오를 보시겠습니까?"})}),T(rg,{children:[s(xt,{to:"/",reloadDocument:!0,children:T(Ys,{color:"98D8AA",children:["Replay ",s(eg,{})]})}),s(xt,{to:"/home",children:T(Ys,{color:"FF6D60",children:["See that ",s(Df,{})]})})]})]})})}const lg=k.div`
