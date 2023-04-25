@@ -14,7 +14,7 @@
         "img":"../dataImages/audioeffector.png",
         "info":"",
         "tags":["Original","Electron","React","WebAudioApi"],
-        "link":"https://github.com/minicastle/AudioEffector#2-%EC%B6%94%EC%B6%9C%EB%B0%A9%EB%B2%95--%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C-%EB%B0%A9%EB%B2%95",
+        "link":"https://github.com/minicastle/AudioEffector/releases/tag/1.0.1",
         "git":"https://github.com/minicastle/AudioEffector",
         "color":"38E54D",
         "start":"2022.04.07"
@@ -24,7 +24,7 @@
         "img":"../dataImages/nature.png",
         "info":"",
         "tags":["Original","Electron","React"],
-        "link":"https://github.com/minicastle/NatureRepublic#2-%EC%B6%94%EC%B6%9C%EB%B0%A9%EB%B2%95--%EC%82%AC%EC%9A%A9-%EB%B0%A9%EB%B2%95",
+        "link":"https://github.com/minicastle/NatureRepublic/releases/tag/1.0.1",
         "git":"https://github.com/minicastle/NatureRepublic",
         "color":"54B435",
         "start":"2021.10.21"
