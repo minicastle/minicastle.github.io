@@ -82,7 +82,7 @@ const BoardItem = styled.div`
   }
   @media screen and (max-width: 430px) {
     width: 300px;
-  } ;
+  }
 `;
 /** Board Item Inner Container */
 const BoardInnerContainer = styled.div`
@@ -117,7 +117,7 @@ const BoardItemImage = styled.img`
     height: fit-content;
     width: 100%;
     margin: 0;
-  } ;
+  }
 `;
 /** 태그 콘테이너 */
 const Tags = styled.div`
@@ -130,7 +130,7 @@ const Tags = styled.div`
   width: 100%;
   @media screen and (max-width: 430px) {
     margin: 0;
-  } ;
+  }
 `;
 /** 태그 아이템 */
 const Tag = styled.div`
@@ -142,7 +142,7 @@ const Tag = styled.div`
   font-size: 20px;
   @media screen and (max-width: 430px) {
     font-size: 15px;
-  } ;
+  }
 `;
 /** 링크 버튼 콘테이너 */
 const LinkButtons = styled.div`
@@ -154,7 +154,7 @@ const LinkButtons = styled.div`
   z-index: 11;
   @media screen and (max-width: 430px) {
     margin: 0;
-  } ;
+  }
 `;
 /** 링크 버튼 */
 const LinkButton = styled.div`

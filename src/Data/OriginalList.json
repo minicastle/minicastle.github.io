@@ -1,5 +1,15 @@
 [
     {
+        "title":"ProjectTycoon",
+        "img":"../dataImages/projecttycoon.png",
+        "info":"",
+        "tags":["Original","Team Project","Front", "Back"],
+        "link":"http://projecttycoon.com",
+        "git":"https://github.com/ReverserofCode/projecttycoon",
+        "color":"082359",
+        "start":"2023.07.24"
+    },
+    {
         "title":"MOVER",
         "img":"../dataImages/Mover.png",
         "info":"",
