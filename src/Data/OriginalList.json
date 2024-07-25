@@ -14,7 +14,7 @@
         "img":"../dataImages/Mover.png",
         "info":"",
         "tags":["Original","Kobis API","React","Naver API"],
-        "link":"https://minicastle.github.io/MovieInfo/",
+        "link":"https://mover-delta.vercel.app/",
         "git":"https://github.com/minicastle/MovieInfo",
         "color":"57C5B6",
         "start":"2023.03.06"
