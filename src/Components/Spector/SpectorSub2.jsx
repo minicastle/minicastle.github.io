@@ -20,6 +20,9 @@ const ButtonContainer = styled.div`
   align-items: center;
   gap: 100px;
   margin: 60px 0 0;
+  @media screen and (max-width: 400px) {
+    gap: 10px;
+  }
 `;
 /** Custom button slice motion*/
 const CornerButton = styled.div`
@@ -36,6 +39,9 @@ const CornerButton = styled.div`
   color: black;
   position: relative;
   font-size: 30px;
+  @media screen and (max-width: 400px) {
+    font-size: 15px;
+  }
   padding: 10px 20px;
   border: solid 5px
     ${(props) => {

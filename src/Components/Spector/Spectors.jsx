@@ -114,7 +114,7 @@ function Spectors() {
           </Spector>
         </>
       ) : frame === "set1" ? (
-        <SpectorHeader></SpectorHeader>
+        <SpectorHeader />
       ) : frame === "set2" ? (
         <SpectorSub1 />
       ) : (

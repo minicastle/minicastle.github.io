@@ -49,6 +49,10 @@ const Size1Container = styled.div`
     width: 350px;
     height: 200px;
   }
+  @media screen and (max-width: 400px) {
+    width: 300px;
+    height: 150px;
+  }
 `;
 /** 자체제작 버튼 제목 */
 const Size1Title = styled.div`

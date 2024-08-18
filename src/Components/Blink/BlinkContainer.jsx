@@ -1,38 +1,42 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 /** 타이핑 애니메이션 및 컨테이너 */
 const Container = styled.div`
-    width: 100%;
-    position: relative;
-    border-right: 3px solid #93C6E7;
-    animation: ${(props)=>{return `Typing ${props.time}s steps(${Number(props.length)}) normal`}},
+  width: 100%;
+  position: relative;
+  border-right: 3px solid #93c6e7;
+  animation: ${(props) => {
+      return `Typing ${props.time}s steps(${Number(props.length)}) normal`;
+    }},
     Blink 0.6s normal infinite;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    @keyframes Typing {
-        0%{
-            width: 0px;
-        }
-        100%{
-            width: 100%;
-        }
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  @keyframes Typing {
+    0% {
+      width: 0px;
     }
-    @keyframes Blink {
-        0%{
-            border-right-color: #93C6E7;
-        }
-        100%{
-            border-right-color: transparent;
-        }
+    100% {
+      width: 100%;
     }
+  }
+  @keyframes Blink {
+    0% {
+      border-right-color: #93c6e7;
+    }
+    100% {
+      border-right-color: transparent;
+    }
+  }
 `;
 /** 타이핑 애니메이션 생성기 */
-function BlinkContainer({children,time}) {
-    let childrenLength = (children.props.children).length;
-    return (
-        <Container length={childrenLength} time={time}>{children}</Container>
-    )
+function BlinkContainer({ children, time }) {
+  let childrenLength = children.props.children.length;
+  return (
+    <Container length={childrenLength} time={time}>
+      {children}
+    </Container>
+  );
 }
 
-export default BlinkContainer
+export default BlinkContainer;

@@ -1,20 +1,22 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { Type2 } from '../TextFormat';
-import BlinkContainer from '../Blink/BlinkContainer';
+import React from "react";
+import styled from "@emotion/styled";
+import { Type2 } from "../TextFormat";
+import BlinkContainer from "../Blink/BlinkContainer";
 
 const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 /** 사이트 제작목적 */
 function SpectorSub1() {
-    return (
-        <Container>
-            <BlinkContainer time={4}><Type2>이 사이트는 정성민의 '포트폴리오'를 위해 제작되었습니다.</Type2></BlinkContainer>
-        </Container>
-    )
+  return (
+    <Container>
+      <BlinkContainer time={3}>
+        <Type2>이 사이트는 정성민의 '포트폴리오' 입니다.</Type2>
+      </BlinkContainer>
+    </Container>
+  );
 }
 
-export default SpectorSub1
+export default SpectorSub1;
