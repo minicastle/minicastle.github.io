@@ -22,6 +22,7 @@ const Container = styled.div`
   background-image: url(./images/backDefault.png);
   background-size: contain;
   position: relative;
+  overflow: hidden;
   /* overflow: hidden; */
 `;
 

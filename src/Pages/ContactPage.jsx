@@ -13,6 +13,7 @@ const Container = styled.div`
   width: 100%;
   background-color: #2b2b2b;
   padding-bottom: 20px;
+  margin-top: 30px;
 `;
 /** 메일 콘테이너 */
 const Mail = styled.div`
@@ -26,7 +27,7 @@ const Mail = styled.div`
   box-sizing: border-box;
   gap: 50px;
   @media screen and (max-width: 500px) {
-    padding: 0 0 0 30px;
+    padding: 30px 0 0 30px;
   }
 `;
 /** 메일 설명 및 주소 콘테이너 */
@@ -190,7 +191,9 @@ function ContactPage() {
       <Mail>
         <MailInfo>
           <a id="email" />
-          <Type4 color="ECF9FF">Email</Type4>
+          <Type4 color="ECF9FF" id="email">
+            Email
+          </Type4>
           <Type4>- minicastle@kakao.com </Type4>
           <MailButton
             bgcolor="93BFCF"
@@ -206,14 +209,16 @@ function ContactPage() {
             Copy Address
           </MailButton>
           <a id="git" />
-          <Type4> Git Hub</Type4>
+          <Type4 id="git"> Git Hub</Type4>
           <Type4>
             <a href="https://github.com/minicastle" target={"_blank"}>
               - https://github.com/minicastle
             </a>
           </Type4>
           <a id="address" />
-          <Type4 color="ECF9FF">Address</Type4>
+          <Type4 id="address" color="ECF9FF">
+            Address
+          </Type4>
           <Type4> - 서울특별시 강북구 인수동 4.19로 13길</Type4>
           <KakaoMap id="kakaomap"></KakaoMap>
         </MailInfo>
