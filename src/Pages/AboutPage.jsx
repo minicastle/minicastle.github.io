@@ -186,12 +186,12 @@ function AboutPage() {
           <AboutText>
             {" "}
             다양한 프로젝트를 경험하는 것 만으로도 코드에 대한 이해와 활용에
-            도움이 되는 것을 알기에 강의를 선택해 듣게 되었습니다.
+            도움이 되는 것을 알기에 강의를 선택해 이수 하였습니다.
           </AboutText>
           <AboutText>강의 후기</AboutText>
           <AboutText>
             : 다양한 프로젝트를 경험해 볼수 있었고 현업에서 활용할 수 있는
-            Component, Kakao API 등 도움이 되는 활용법들을 익힐수 있었습니다.
+            Component, Kakao API 등 개발에 도움이 되는 활용법들을 습득했습니다.
           </AboutText>
         </AboutTextContainer>
         <AboutImages>
@@ -237,13 +237,13 @@ function AboutPage() {
             아무리 정보통신 학과를 나왔다고는 하지만 전공 대학교에서 교육을 받은
             분들과 비교한다면 많은 부분에서 Network 지식, 서버의 이해가
             부족하다고 생각했습니다.
-            <br /> 때문에 부족한 부분을 보충하기 위해 강의를 선택하게
+            <br /> 때문에 부족한 부분을 보충하기 위해 강의를 이수하게
             되었습니다.
           </AboutText>
 
           <AboutText>강의 후기</AboutText>
           <AboutText>
-            : 자격증 취득과정이 아닌 업무능력 향상에 관련된 과정을 듣게 되어
+            : 자격증 취득과정이 아닌 업무능력 향상에 관련된 과정을 이수하게 되어
             다행이라는 생각을 먼저 하게 되었습니다.
           </AboutText>
           <AboutText>
